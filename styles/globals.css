@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Css */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap');
+
+body{
+  font-family: 'Karla', sans-serif !important;
+}
+
+.sideNavBgColor{
+  background: linear-gradient(192.77deg, rgba(0, 240, 255, 0.8) -22.81%, rgba(83, 118, 255, 0.8) 28.04%, rgba(0, 12, 182, 0.8) 114.1%);
+}
+.droppDown{
+  display: block;
+}
+.innerDropdown{
+  display: none;
+}
+.droppDown:hover .innerDropdown{
+  display: block;
+}
+.innerDropdown:hover{
+  display: block;
+}
+.sideNav li{
+  padding: 14px 30px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.sideNav .activeLi{
+ background-color: white;
+ color: #3F434A;
+ margin-right: 60px;
+ border-radius: 0px 50px 50px 0px;
+}

@@ -1,10 +1,23 @@
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'Primary': '#B7076B',
+        'dark':'#3F434A',
+        'orange':'#FF9900',
+        'lighterBlue':'#7FCDFF',
+        'offWhite': '#F9F9F9',
+        'greyLight': '#828282'
+      },
+      boxShadow: {
+        'primary': '0px 0px 20px rgba(0, 0, 0, 0.07)',
+      }
+    },
   },
   plugins: [],
 }
