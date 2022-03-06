@@ -45,7 +45,7 @@ export default function SideNav(props){
         <div className="relative w-40 mx-auto droppDown">
           <Link href="/vetted-tailor-application">
             <a>
-              <div className="innerDropdown bg-white rounded-xl shadow-sm absolute w-60 px-3 py-4 right-10 top-11 cursor-pointer  text-dark">
+              <div className="innerDropdown bg-white rounded-xl shadow-sm absolute w-60 px-3 py-4 -right-10 top-11 cursor-pointer  text-dark">
                   <span className=" text-sm font-bold">Apply to be a VETTED Tailor</span>
               </div>
             </a>
