@@ -19,7 +19,7 @@ export default function Layout({ children, ...props}) {
         h-screen
         overflow-y-hidden'>
         <SideNav toggleNav={toggleNav} setToggleNav={setToggleNav}/>
-        <div className='w-full bg-offWhite h-full '>
+        <div className='w- full bg-offWhite h-full '>
           <TopNav title={title} handleToggleNav={handleToggleNav} toggleNav={toggleNav}/>
           <div className=' px-4 xl:px-10 py-10 xl:py-20 h-full overflow-y-auto pb-32 '>
             {children}
