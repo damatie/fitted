@@ -12,7 +12,7 @@ export default function SideNav(props){
     {name:'Logout', url:'/#', icon:'/icon/logout.svg'}
   ]
   return(
-    <nav className={`${toggleNav? 'block bg-blue-500' :'hidden sideNavBgColor'} h-full w-80 absolute xl:relative xl:w-3/12 z-50 xl:z-auto   xl:block`}>
+    <nav className={`${toggleNav? 'block bg-blue-500' :'hidden sideNavBgColor'} overflow-y-auto h-screen w-80 absolute xl:relative xl:w-3/12 z-50 xl:z-auto   xl:block`}>
       <div className=" mt-4 pl-10">
       <Image
             src="/icon/logo.svg"
@@ -45,7 +45,7 @@ export default function SideNav(props){
         <div className="relative w-40 mx-auto droppDown">
           <Link href="/vetted-tailor-application">
             <a>
-              <div className="innerDropdown bg-white rounded-xl shadow-sm absolute w-60 px-3 py-4 -right-22 top-11 cursor-pointer  text-dark">
+              <div className="innerDropdown bg-white rounded-xl shadow-sm absolute w-60 px-3 py-4 right-10 top-11 cursor-pointer  text-dark">
                   <span className=" text-sm font-bold">Apply to be a VETTED Tailor</span>
               </div>
             </a>

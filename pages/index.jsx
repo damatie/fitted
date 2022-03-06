@@ -56,7 +56,7 @@ export default function Home() {
                     />
                   </span>
                 </div>
-                <div className='lg:w-4/12 md:w-5/12 xl:w-full mx-auto xl:mx-0  xl:flex  items-center w-full justify-center mt-5 space-y-3 xl:space-y-0'>
+                <div className='lg:w-4/12 md:w-5/12 mx-auto xl:mx-0  xl:flex  items-center w-full justify-center mt-5 space-y-3 xl:space-y-0'>
                   <span className='flex flex-1 space-x-2 xl:space-x-5'>
                     <span className=' block w-7 h-7 xl:w-10 xl:h-10 rounded-full bg-[#F6EEFF] text-center xl:pt-2.5 pt-1'>
                       {/* <img src="/icon/Call Silent.svg "/> */}
