@@ -12,8 +12,16 @@ export default function SideNav(props){
     {name:'Logout', url:'/#', icon:'/icon/logout.svg'}
   ]
   return(
-    <nav className=" w-96  h-full absolute xl:relative xl:w-3/12 z-50 xl:z-auto sideNavBgColor  xl:block">
-      <div className=" w-full pt-10 text-center">
+    <nav className={`${toggleNav? 'block bg-blue-500' :'hidden sideNavBgColor'} h-full w-80 absolute xl:relative xl:w-3/12 z-50 xl:z-auto   xl:block`}>
+      <div className=" mt-4 pl-10">
+      <Image
+            src="/icon/logo.svg"
+            alt="edit"
+            width={80}
+            height={80}
+          />
+      </div>
+      <div className=" w-full pt-10 text-center -mt-20">
         <div className=" w-20 h-20 bg-blue-800 mx-auto text-center py-5 rounded-full border borde-white relative">
           <span className=" uppercase font-extrabold text-white text-3xl"> sa</span>
           <div className=" absolute w-10 h-10 bg-slate-100 rounded-full border-4 border-white  -right-11 top-10 text-center py-1 cursor-pointer">

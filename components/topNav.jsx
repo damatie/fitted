@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 export default function TopNav(props){
  
   const router = useRouter()
-  const{title,handleToggleNav} = props
+  const{title,handleToggleNav,toggleNav} = props
   return(
     <div className=" px-4 xl:px-10 xl:py-4 py-2 pb-4 bg-white flex space-x-16">
       <div className=" pt-3 xl:pt-6 cursor-pointer">
@@ -45,14 +45,17 @@ export default function TopNav(props){
             <span className=" uppercase font-extrabold text-white text-xl"> sa</span>
         </div>
       </div>
-      <div onClick={handleToggleNav} className="block xl:hidden pt-5 xl:pt-6 cursor-pointer ">
-      <span className=" block">
-      <Image
-          src="/icon/bar.svg"
-          alt="back"
-          width={15}
-          height={15}
-        />
+      <div onClick={handleToggleNav} className="block xl:hidden pt-3 xl:pt-6 cursor-pointer ">
+      <span className=" block text-xl">
+      {toggleNav && toggleNav? ('X') 
+      :
+      (<Image
+        src="/icon/bar.svg"
+        alt="back"
+        width={15}
+        height={15}
+      />)
+      }
       </span>
       </div>
     </div>
