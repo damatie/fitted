@@ -30,11 +30,11 @@ export default function Table(){
       </div>
     </div>
     <div className=" min-w-max  ">
-      <table class=" w-full text-sm">
+      <table className=" w-full text-sm">
         <thead>
           <tr className=" text-left text-greyLight">
           <th className="  pl-5 py-4">
-            <input type="checkbox" class="checkbox" />
+            <input type="checkbox" className="checkbox" />
           </th>
             <th  >Transaction ID</th>
             <th>Transaction type</th>
@@ -47,9 +47,9 @@ export default function Table(){
         </thead>
         <tbody>
           { tableData && tableData.map((data, index)=>(
-            <tr className=" border-t text-dark">
+            <tr key={index} className=" border-t text-dark">
             <td className="pl-5 py-4">
-            <input type="checkbox" class="checkbox" />
+            <input type="checkbox" className="checkbox" />
             </td>
             <td>{data.tId}</td>
             <td>{data.tType}</td>
