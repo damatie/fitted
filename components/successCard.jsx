@@ -10,8 +10,8 @@ export default function SuccessCard({setSuccess}) {
         <Image
           src="/icon/success.svg"
           alt="img"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
         />
         </div>
         <div className="w-1/2">

@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-export default function SideNav(){
+import { useState } from "react"
+export default function SideNav(props){
+  const{toggleNav,setToggleNav} = props
   const navLinks = [
     {name:'Measurements', url:'/#', icon:'/icon/tape.svg'},
     {name:'Orders',  url:'/#', icon:'/icon/bag.svg'},
@@ -10,7 +12,7 @@ export default function SideNav(){
     {name:'Logout', url:'/#', icon:'/icon/logout.svg'}
   ]
   return(
-    <nav className="w-3/12 h-screen sideNavBgColor hidden xl:block">
+    <nav className=" w-96  h-full absolute xl:relative xl:w-3/12 z-50 xl:z-auto sideNavBgColor  xl:block">
       <div className=" w-full pt-10 text-center">
         <div className=" w-20 h-20 bg-blue-800 mx-auto text-center py-5 rounded-full border borde-white relative">
           <span className=" uppercase font-extrabold text-white text-3xl"> sa</span>
@@ -33,9 +35,13 @@ export default function SideNav(){
         Get measurements from any customer via this link
         </span>
         <div className="relative w-40 mx-auto droppDown">
-          <div className="innerDropdown bg-white rounded-xl shadow-sm absolute w-60 px-3 py-4 -right-22 top-11 cursor-pointer  text-dark">
-              <span className=" text-base font-bold">Apply to be a VETTED Tailor</span>
-          </div>
+          <Link href="/vetted-tailor-application">
+            <a>
+              <div className="innerDropdown bg-white rounded-xl shadow-sm absolute w-60 px-3 py-4 -right-22 top-11 cursor-pointer  text-dark">
+                  <span className=" text-sm font-bold">Apply to be a VETTED Tailor</span>
+              </div>
+            </a>
+          </Link>
           <div className=" border border-white py-1 pt-1 w-40 justify-center rounded-md mx-auto mt-4 space-x-2 leading-7 flex  cursor-pointer ">
             <span className=" inline-block leading-8 font-normal text-sm text-white rounded-md ">Non -Vetted Tailor</span>
             <span className=" inline-block leading-9">

@@ -37,3 +37,47 @@ body{
  margin-right: 60px;
  border-radius: 0px 50px 50px 0px;
 }
+.tab{
+  padding:15px 0px;
+  cursor: pointer;
+  color: #4F4F4F;
+}
+.tabActive{
+  display: block;
+  width: 120px;
+  border-bottom: solid 4px #B7076B ;
+}
+.tabContent{
+  display: none;
+}
+.tabContentActive{
+  display: block ;
+}
+.checkbox {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 25%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #B7076B;
+}
+.tabeleDropDown{
+  display: block;
+}
+.tabeleDropDown div{
+  display: none;
+}
+
+.tabeleDropDown:hover div{
+  display: block;
+}
+
+

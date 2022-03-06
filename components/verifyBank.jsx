@@ -1,65 +1,9 @@
-import { getBanks,resolveBankAccount } from "../services/apiFactory"
-import { useState,useEffect } from "react"
 
-import Errors from "./error"
-export default function VerifyBank({banks,setBanks,bankCode,setBankCode,accountNumber,
-  setAccountNumber,error,setError,loading,setLoading,handleBandCode,handleAccountNumber,handleSubmit}){
+export default function VerifyBank({banks,loading,handleBandCode,handleAccountNumber,handleSubmit}){
+
+console.log(loading)
 
 
-    // console.log(banks.banks.banks)
-    // console.log(banks)
-
-
-//  const getAllBanks =()=>{
-//   getBanks().then(res => {
-//     const result = res.data.data
-//     setBanks(result)
-//   })
-//  }
-//  const handlBandCode = (e) => {
-//   const getCode = banks.filter(((bank, index) => bank.name === e.target.value) );
-  
-//   if(getCode){
-//    if(  getCode[0]?.code!==undefined){
-//     // console.log(getCode[0]?.code)
-//     setBankCode(getCode[0]?.code)
-//    }
-//   }
-
-//  }
-
-//  const handleAccountNumber =(e)=>{
-//   setAccountNumber(e.target.value)
-// }
-
-//  const handleSubmit =()=>{
-//    const accountData = {
-//     "bankCode":bankCode,
-//     "accountNo":accountNumber
-//   }
-//   resolveBankAccount(accountData).then(res => {
-//     const applicationResult = res.statusText
-//     if(applicationResult==="OK"){
-//       setError(null)
-//     }
-    
-//   }).catch((err)=>{
-//     if(err){
-//       setError('!Invalid account information')
-//       console.log(error)
-//     }
-//   })
-
-  
-//  }
-
-console.log(banks)
-
-//  console.log(banks)
-//  Onload get data
-//  useEffect(()=>{
-//   getAllBanks()
-//  },[]);
 
   return(
     <form action="">
@@ -87,15 +31,13 @@ console.log(banks)
         </div>
       </div>
       
-
+           
      <div className=" xl:text-left text-center mt-4 xl:mt-0">
-     <button type='button' onClick={handleSubmit} className='italic text-xs xl:text-base bg-Primary font-medium xl:font-bold text-offWhite  py-2 xl:py-4 px-6 rounded-md'>Submit Application</button>
+       { loading==false? (<button type='button' onClick={handleSubmit} className='italic text-xs xl:text-base bg-Primary font-medium xl:font-bold text-offWhite  py-3 xl:py-4 px-6 rounded-md'>Submit Application</button>)
+       : 'Checking...'
+       }
+     
      </div>
-     {error && error? 
-        <Errors error={error} />
-         :
-        ''
-      }
     </form>
   )
 }
